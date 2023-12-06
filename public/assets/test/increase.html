@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Number with Increase/Decrease Buttons</title>
+    <style>
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .input-wrapper button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-wrapper">
+        <button id="decreaseButton">-</button>
+        <input type="number" id="numberInput" min="1" max="4">
+        <button id="increaseButton">+</button>
+    </div>
+
+    <script>
+        const numberInput = document.getElementById('numberInput');
+        const decreaseButton = document.getElementById('decreaseButton');
+        const increaseButton = document.getElementById('increaseButton');
+
+        // Mendapatkan nilai maksimum dari controller di Laravel
+        const maxNumber = 4; // Ganti dengan nilai yang sesuai dari Laravel
+
+        // Fungsi untuk mengatur status tombol berdasarkan nilai saat ini
+        function updateButtonStatus() {
+            const currentNumber = parseInt(numberInput.value);
+            decreaseButton.disabled = (currentNumber <= 1);
+            increaseButton.disabled = (currentNumber >= maxNumber);
+        }
+
+        // Event listener untuk tombol decrease
+        decreaseButton.addEventListener('click', function() {
+            let currentNumber = parseInt(numberInput.value);
+            if (currentNumber > 1) {
+                currentNumber--;
+                numberInput.value = currentNumber;
+                updateButtonStatus();
+            }
+        });
+
+        // Event listener untuk tombol increase
+        increaseButton.addEventListener('click', function() {
+            let currentNumber = parseInt(numberInput.value);
+            if (currentNumber < maxNumber) {
+                currentNumber++;
+                numberInput.value = currentNumber;
+                updateButtonStatus();
+            }
+        });
+    </script>
+</body>
+</html>
