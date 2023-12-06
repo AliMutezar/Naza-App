@@ -1,4 +1,4 @@
-@extends('layouts.app-mazer')
+@extends('backoffice_layouts.app-mazer')
 @section('content')
 
 <header class="mb-3">
