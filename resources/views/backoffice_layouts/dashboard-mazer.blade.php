@@ -8,7 +8,12 @@
 </header>
 
 <div class="page-heading">
-    <h3>Call to Action Statistics</h3>
+    <div class="row">
+        <div class="d-flex justify-content-between">
+            <h3>Call to Action Statistics</h3>
+            <h3>Hi, {{ auth()->user()->name }}</h3>
+        </div>
+    </div>
 </div>
 
 <div class="page-content">
