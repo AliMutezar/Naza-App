@@ -33,7 +33,7 @@
                 <button data-filter=".cat4">web design</button>
             </div> 
         </div>
-        <div class="row grid-ngga-jalan mt-none-30">
+        <div class="row grid mt-none-30">
                 <div class="col-lg-4 col-md-6 col-sm-6 grid-item cat1 cat4">
                     <div class="xb-portfolio mt-30">
                         <div class="xb-item--img">
