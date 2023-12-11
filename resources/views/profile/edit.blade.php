@@ -41,13 +41,17 @@
                 </div>
             </div>
 
-            <div class="col">
+            {{-- <div class="col">
                 <div class="p-4 bg-white shadow rounded">
                     <div class="max-w-xl">
                         @include('profile.partials.delete-user-form')
                     </div>
                 </div>
-            </div>
+            </div> --}}
+        </div>
+
+        <div class="row row-cols-1">
+            @include('backoffice_includes.footer')
         </div>
     </div>
 </div>
