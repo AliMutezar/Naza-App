@@ -19,6 +19,7 @@
         </div>
     </div>
     @include('backoffice_includes.script-js')
+    @include('includes.sweetalerts')
 
 </body>
 

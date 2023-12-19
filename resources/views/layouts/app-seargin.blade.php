@@ -55,6 +55,9 @@
     <!-- jquery include -->
     @include('includes.js')
 
+    {{-- Sweer Alert --}}
+    @include('includes.sweetalerts')
+
 
 </body>
 

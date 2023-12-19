@@ -25,7 +25,7 @@
             <div class="col-xl-3 col-lg-6 col-md-6 mt-30">
                 <div class="xb-contact-info text-center">
                     <div class="xb-item--icon">
-                        <img src="assets/img/icon/location-2.svg" alt="">
+                        <img src="{{ asset('assets/img/icon/location-2.svg') }} " alt="">
                     </div>
                     <h3 class="xb-item--title">Location</h3>
                     <div class="xb-item--content">
@@ -36,7 +36,7 @@
             <div class="col-xl-3 col-lg-6 col-md-6 mt-30">
                 <div class="xb-contact-info text-center">
                     <div class="xb-item--icon">
-                        <img src="assets/img/icon/telephone1.svg" alt="">
+                        <img src="{{ asset('assets/img/icon/telephone1.svg') }} " alt="">
                     </div>
                     <h3 class="xb-item--title">Contact</h3>
                     <div class="xb-item--content">
@@ -47,7 +47,7 @@
             <div class="col-xl-3 col-lg-6 col-md-6 mt-30">
                 <div class="xb-contact-info text-center">
                     <div class="xb-item--icon">
-                        <img src="assets/img/icon/email1.svg" alt="">
+                        <img src="{{ asset('assets/img/icon/email1.svg') }} " alt="">
                     </div>
                     <h3 class="xb-item--title">Email</h3>
                     <div class="xb-item--content">
@@ -58,7 +58,7 @@
             <div class="col-xl-3 col-lg-6 col-md-6 mt-30">
                 <div class="xb-contact-info text-center">
                     <div class="xb-item--icon">
-                        <img src="assets/img/icon/timetable1.svg" alt="">
+                        <img src="{{ asset('assets/img/icon/timetable1.svg') }} " alt="">
                     </div>
                     <h3 class="xb-item--title">Visit Between</h3>
                     <div class="xb-item--content">
@@ -75,66 +75,94 @@
 <section class="contact">
     <div class="container">
         <div class="sec-title text-center mb-45">
-            <span class="subtitle ul_li"><img src="assets/img/icon/hr_icon.png" alt="">Get In Touch WITH US</span>
+            <span class="subtitle ul_li"><img src="{{ asset('assets/img/icon/hr_icon.png') }} " alt="">Get In Touch WITH US</span>
             <h2 class="title">Contact us Today for Expert <br> Financial Guidance</h2>
         </div>
         <div class="xb-contact__area">
-            <form class="contact-from" action="#">
+            <form class="contact-from needs-validation" method="POST" action="{{ route('customer.store') }}">
+                @csrf
+
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="xb-item--field">
                             <label for="name">Name*</label>
                             <div class="field-inner pos-rel">
-                                <span class="icon"><img src="assets/img/icon/ins_user.svg" alt=""></span>
-                                <input id="name" type="text" placeholder="Goladria Gomez">
+                                <span class="icon"><img src="{{ asset('assets/img/icon/ins_user.svg') }} " alt=""></span>
+                                <input id="name" name="name" class="form-control @error('name') is-invalid border-invalid ? '' @enderror" type="text" placeholder="Goladria Gomez" value="{{ old('name') }}">
                             </div>
+                            @error('name')
+                                <div class="mt-2 text-danger">
+                                    <span>{{ $message }}</span>
+                                </div>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="xb-item--field">
                             <label for="email">Email*</label>
                             <div class="field-inner pos-rel">
-                                <span class="icon"><img src="assets/img/icon/ins-sms-tracking.svg" alt=""></span>
-                                <input id="email" type="email" placeholder="seargin@agency.com">
+                                <span class="icon"><img src="{{ asset('assets/img/icon/ins-sms-tracking.svg') }} " alt=""></span>
+                                <input id="email" class="form-control @error('email') is-invalid ? '' @enderror" name="email" type="email" placeholder="seargin@agency.com" value="{{ old('email') }}">
                             </div>
+                            
+                            @error('email')
+                                <div class="mt-2 text-danger">
+                                    @foreach($errors->get('email') as $error)
+                                        <span>{{ $error }}</span><br>
+                                    @endforeach
+                                </div>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="xb-item--field">
                             <label for="phone">Phone *</label>
                             <div class="field-inner pos-rel">
-                                <span class="icon"><img src="assets/img/icon/call-calling.svg" alt=""></span>
-                                <input id="phone" type="email" placeholder="+1 088 01 4800 24">
+                                <span class="icon"><img src="{{ asset('assets/img/icon/call-calling.svg') }}" alt=""></span>
+                                <input id="phone" class="form-control @error('phone') is-invalid ? '' @enderror" name="phone" type="number" placeholder="+1 088 01 4800 24" value="{{ old('phone') }}">
                             </div>
+                            @error('phone')
+                            <div class="text-danger mt-2">
+                                <span>{{ $message }}</span>
+                            </div>
+                        @enderror
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="xb-item--field">
                             <label>Subject *</label>
                             <div class="field-inner pos-rel">
-                                <span class="icon"><img src="assets/img/icon/ins-home-hashtag.svg" alt=""></span>
-                                <select name="select" class="nice-select">
-                                    <option value="1">Select Subject</option>
-                                    <option value="2">Market Analysis</option>
-                                    <option value="3">Investment Insights</option>
-                                    <option value="4">Estate Planning</option>
-                                    <option value="4">Risk Assessment</option>
+                                <span class="icon"><img src="{{ asset('assets/img/icon/ins-home-hashtag.svg') }} " alt=""></span>
+                                <select name="service_id" class="nice-select">on>
+                                    @foreach ($services as $service)
+                                        <option value="{{ $service->id }}">{{ $service->name }}</option>
+                                    @endforeach
                                 </select>
+                                @error('service_id')
+                                    <div class="mt-2 text-danger">
+                                        <span>{{ $message }}</span>
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="xb-item--field">
                             <label for="message">Message</label>
-                            <div class="field-inner pos-rel">
-                                <span class="icon"><img src="assets/img/icon/messages-2.svg" alt=""></span>
-                                <textarea name="message" id="message" cols="30" rows="10"
-                                    placeholder="Write Your Message..."></textarea>
+                            <div class="field-inner pos-rel @error('message') is-invalid @enderror">
+                                <span class="icon"><img src="{{ asset('assets/img/icon/messages-2.svg') }}" alt=""></span>
+                                {{-- Kalo pake texarea, jangan di enter atau dikasih sepasi di dalamnya --}}
+                                <textarea name="message" class="form-control @error('message') is-invalid ? '' @enderror" cols="30" rows="10">{{ old('message') }}</textarea>
                             </div>
+                            @error('message')
+                                <div class="mt-2 text-danger">
+                                    <span>{{ $message }}</span>
+                                </div>
+                            @enderror
                         </div>
                     </div>
                     <div class="form-button text-center">
-                        <button class="xb-btn">send a message</button>
+                        <button type="submit" class="xb-btn">send a message</button>
                     </div>
                 </div>
             </form>

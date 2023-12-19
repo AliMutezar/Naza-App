@@ -53,20 +53,20 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item  has-sub">
+                <li class="sidebar-item {{ request()->routeIs('services*', 'customer*') ? 'active' : '' }} has-sub">
                     <a href="#" class='sidebar-link'>
                         <i class="bi bi-stack"></i>
                         <span>Manage</span>
                     </a>
-                    <ul class="submenu ">
-                        <li class="submenu-item ">
-                            <a href="component-alert.html">Portfolio Categories</a>
+                    <ul class="submenu {{ request()->routeIs('services*', 'customer*') ? 'active' : '' }}">
+                        <li class="submenu-item {{ request()->routeIs('customer*') ? 'active' : '' }} ">
+                            <a href="{{ route('customer.data') }}">Leads</a>
                         </li>
                         <li class="submenu-item ">
                             <a href="component-badge.html">Portfolios</a>
                         </li>
-                        <li class="submenu-item ">
-                            <a href="component-button.html">Potential Customers</a>
+                        <li class="submenu-item {{ request()->routeIs('services*') ? 'active' : '' }}">
+                            <a href="{{ route('services.data') }}">Services</a>
                         </li>
                         <li class="submenu-item ">
                             <a href="component-breadcrumb.html">Users</a>

@@ -91,7 +91,9 @@ body {
   color: var(--color-default);
   background-color: var(--color-white); }
 
-.gutter-sizer { width: 2.5%; }
+.border-invalid {
+  border-color: #dc3545;
+}
 
 img {
   max-width: 100%;
@@ -7154,7 +7156,7 @@ body[data-aos-easing="ease"] [data-aos="zoom-in"] {
   border: 1px solid #E7E9EE;
   background-color: var(--color-white);
   padding: 50px;
-  margin-bottom: -100px;
+  margin-bottom: 0px;
   z-index: 2;
   position: relative; }
   @media (max-width: 767px) {
@@ -13093,3 +13095,5 @@ abbr[title] {
     bottom: 0; } }
 
 /*# sourceMappingURL=main.css.map */
+
+/* Custome css */

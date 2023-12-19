@@ -22,3 +22,6 @@
     <script src=" {{ url('assets/js/rs6.min.js') }} "></script>
     <script src=" {{ url('assets/js/main.js') }} "></script>
     <script src=" {{ url('assets/js/masonry-horizontal.js') }} "></script>
+    
+    {{-- Sweetalert --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

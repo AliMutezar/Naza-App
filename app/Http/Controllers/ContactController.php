@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Service;
 
 class ContactController extends Controller
 {
     public function index()
     {
-        return view('frontend_layouts.contact', [
-            "title" => "Nazaconsult - Business Consulting",
-            "meta_description" => "Collaborate with Nazaconsults to enhance the development of your business"
-        ]);
+        $data['services'] = Service::all();
+        $data['title'] = "Nazaconsult - Business Consulting";
+        $data['meta_description'] = "Collaborate with Nazaconsults to enhance the development of your business";
+        return view('frontend_layouts.contact', $data);
     }
 
 }
