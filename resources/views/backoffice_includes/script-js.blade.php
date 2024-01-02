@@ -13,8 +13,4 @@
     });
 </script>
 
-<!-- Need: Apexcharts -->
-<script src="{{ url('assets_backend/extensions/apexcharts/apexcharts.min.js') }}"></script>
-<script src="{{ url('assets_backend/js/pages/dashboard.js') }}"></script>
-
 <script src="{{ url('assets_backend/js/naza.js') }}"></script>

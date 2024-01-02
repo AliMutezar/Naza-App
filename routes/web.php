@@ -3,6 +3,7 @@
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PorfolioController;
 use App\Http\Controllers\ProfileController;
@@ -47,11 +48,6 @@ Route::controller(CareerController::class)->group(function() {
 });
 
 
-
-Route::get('/dashboard', function () {
-    return view('backoffice_layouts/dashboard-mazer');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -59,8 +55,11 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
 Route::middleware(['auth', 'verified'])->group(function() {
+    Route::controller(DashboardController::class)->group(function() {
+        Route::get('/dashboard', 'index')->name('dashboard');
+    });
+
     Route::controller(ServicesController::class)->group(function() {
         Route::get('/services/data', 'getServicesData')->name('services.data');
         Route::get('/services/create', 'create')->name('services.create');

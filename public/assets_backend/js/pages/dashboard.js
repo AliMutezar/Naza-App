@@ -72,65 +72,65 @@
 //     },
 // };
 
-var optionsCustomerSubmission = {
-	series: [
-		{
-			name: 'Contacted',
-			data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-		}, {
-			name: 'Form Submit',
-			data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-		}, {
-			name: 'Uncontacted',
-			data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
-		}
-	],
-	chart: {
-		type: 'bar',
-		height: 350
-	},
-
-	plotOptions: {
-		bar: {
-		horizontal: false,
-		columnWidth: '55%',
-		endingShape: 'rounded'
+	var optionsCustomerSubmission = {
+		series: [
+			{
+				name: 'Contacted',
+				data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+			}, {
+				name: 'Form Submit',
+				data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+			}, {
+				name: 'Uncontacted',
+				data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+			}
+		],
+		chart: {
+			type: 'bar',
+			height: 350
 		},
-	},
 
-	dataLabels: {
-		enabled: false
-	},
+		plotOptions: {
+			bar: {
+			horizontal: false,
+			columnWidth: '55%',
+			endingShape: 'rounded'
+			},
+		},
 
-	stroke: {
-		show: true,
-		width: 2,
-		colors: ['transparent']
-	},
+		dataLabels: {
+			enabled: false
+		},
 
-	xaxis:
-	 {
-		categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-	},
+		stroke: {
+			show: true,
+			width: 2,
+			colors: ['transparent']
+		},
 
-	yaxis: {
-		title: {
-		text: '$ (thousands)'
+		xaxis:
+		{
+			categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+		},
+
+		yaxis: {
+			title: {
+			text: '$ (thousands)'
+			}
+		},
+
+		fill: {
+			opacity: 1
+		},
+
+		tooltip: {
+			y: {
+			formatter: function (val) {
+				return "$ " + val + " thousands"
+			}
+			}
 		}
-	},
-
-	fill: {
-		opacity: 1
-	},
-
-	tooltip: {
-		y: {
-		formatter: function (val) {
-			return "$ " + val + " thousands"
-		}
-		}
-	}
-};
+	};
 
 let optionsVisitorsProfile  = {
 	series: [100, 83],

@@ -20,7 +20,7 @@
     </div>
     @include('backoffice_includes.script-js')
     @include('includes.sweetalerts')
-
+    @stack('after-script')
 </body>
 
 </html>
