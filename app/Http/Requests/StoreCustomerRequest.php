@@ -24,7 +24,7 @@ class StoreCustomerRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255|string',
-            'phone' => 'required|max:20',
+            'phone' => 'required|numeric',
             'email' => 'required|email|unique:users,email',
             'message' => 'required|regex:/^\S.*\S$/',
             'service_id' => 'required',

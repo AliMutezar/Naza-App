@@ -23,11 +23,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function() {
-    return Redirect::route('home');
-});
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::controller(ContactController::class)->group(function() {
     Route::get('/contact', 'index')->name('contact');
 });
@@ -38,14 +34,16 @@ Route::controller(ServicesController::class)->group(function() {
 });
 
 Route::controller(PorfolioController::class)->group(function() {
-    Route::get('/porfolio', 'index')->name('porfolio');
-    Route::get('/portfolio-details', 'portfolioDetails')->name('porfolio.details');
+    Route::get('/case-studies', 'index')->name('porfolio');
+    Route::get('/case-studies-details', 'portfolioDetails')->name('porfolio.details');
 });
 
 Route::controller(CareerController::class)->group(function() {
     Route::get('/career', 'index')->name('career');
     Route::get('/career-details', 'carrerDetails')->name('career.details');
 });
+
+Route::post('/customer-post', [CustomerController::class, 'store'])->name('customer.store');
 
 
 Route::middleware('auth')->group(function () {
@@ -70,7 +68,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
 
     Route::controller(CustomerController::class)->group(function() {
         Route::get('/customer/data', 'index')->name('customer.data');
-        Route::post('/customer/post', 'store')->name('customer.store');
+        // Route::post('/customer/post', 'store')->name('customer.store');
         Route::get('/customer/edit/{id}', 'edit')->name('customer.edit');
         Route::put('/customer/update/{id}', 'update')->name('customer.update');
     });

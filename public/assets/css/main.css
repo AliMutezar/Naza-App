@@ -79,6 +79,9 @@ html {
   scroll-behavior: smooth; 
 }
 
+.text-gold {
+  color: #CA965C;
+}
 
 body {
   padding: 0;
@@ -4729,7 +4732,7 @@ body[data-aos-easing="ease"] [data-aos="zoom-in"] {
   left: 0; }
 
 .xb-feature2 {
-  width: 50%;
+  width: 40%;
   padding: 0 45px; }
   @media (max-width: 767px) {
     .xb-feature2 {
@@ -4749,7 +4752,7 @@ body[data-aos-easing="ease"] [data-aos="zoom-in"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     position: relative; }
     .xb-feature2 .xb-item--icon::before {
       position: absolute;

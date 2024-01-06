@@ -7,21 +7,25 @@
         <div class="row align-items-center">
             <div class="hero-content">
                 <div class="sec-title mb-40">
-                    <span class="subtitle ul_li" data-aos="fade-up" data-aos-duration="600"><img
-                            src="assets/img/icon/hr_icon.png" alt=""> Strategic Financial Guidance</span>
-                    <h2 class="title title-big" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Guiding
-                        Financial <br> Success</h2>
+                    {{-- <span class="subtitle ul_li" data-aos="fade-up" data-aos-duration="600"><img
+                            src="assets/img/icon/hr_icon.png" alt=""> Strategic Financial Guidance</span> --}}
+                    <h2 class="title title-big" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                        Mindful Consulting & Holistic Solutions
+                    </h2>
                 </div>
-                <ul class="xb-item--list list-unstyled mb-60" data-aos="fade-up" data-aos-duration="500"
+                <p class="fs-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                    At Naza, we go beyond conventional digital solutions. We are architects of transformation, leveraging our expertise to empower businesses in navigating the digital landscape.
+                </p>
+                {{-- <ul class="xb-item--list list-unstyled mb-60" data-aos="fade-up" data-aos-duration="500"
                     data-aos-delay="400">
                     <li><i class="far fa-check"></i>Personalized Financial Planning</li>
                     <li><i class="far fa-check"></i>Expert Investment Strategies</li>
                     <li><i class="far fa-check"></i>Risk Management Solutions</li>
-                </ul>
-                <div class="xb-item--btn btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+                </ul> --}}
+                {{-- <div class="xb-item--btn btns" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
                     <a class="xb-btn" href="contact.html">Talk to an Expert</a>
                     <a class="xb-btn xb-btn--white" href="about.html">Read Story</a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -31,19 +35,74 @@
 <!-- feature start -->
 <section class="feature feature-pb pt-150 pb-150" data-background="assets/img/bg/feat_bg.jpg">
     <div class="container px-60">
-        <div class="row align-items-start mt-none-30">
-            <div class="col-xl-4 col-lg-4 mt-30" data-aos="fade-left" data-aos-duration="900">
+        <div class="row align-items-start text-center mt-none-30">
+            <div class="col-xl-12 col-lg-12 mt-30" data-aos="fade-left" data-aos-duration="900">
                 <div class="sec-title sec-title--white">
-                    <span class="subtitle ul_li"><img src="assets/img/icon/hr_icon.png" alt=""> Strategic
-                        Financial Guidance</span>
-                    <h2 class="title mb-55">Your Financial <br> Future is Our <br> Commitment</h2>
-                    <p class="mb-25">Our mission is to cultivate financial excellence in every aspect of our
-                        clients' lives. we are committed to providing</p>
-                    <p>personalized, holistic financial solutions that align with our clients' unique
-                        aspirations and circumstances.</p>
+                    {{-- <span class="subtitle ul_li"><img src="assets/img/icon/hr_icon.png" alt=""> Strategic
+                        Financial Guidance</span> --}}
+                    <h2 class="title mb-55">Our Services</h2>
+                    
                 </div>
             </div>
-            <div class="col-xl-5 offset-xl-3 col-lg-6 offset-lg-2 mt-30" data-aos="fade-left" data-aos-duration="900"
+            <div class="col-sm-12 col-md-4" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+                <div class="row justify-content-center">
+                    <div class="xb-feature justify-content-center xb-feature2 mt-70">
+                        <div class="xb-item--icon">
+                            <img src="assets/img/icon/feat_01.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="card" style="width: 20rem; height: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title my-3">Digital Marketing</h5>
+                          <p class="card-text">Digital Marketing: SEO, SEM, Social Media Marketing, KOL/Influencer Marketing, Social Media Ads, Meta Ads.</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="{{ route('porfolio.details') }}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+                <div class="row justify-content-center">
+                    <div class="xb-feature justify-content-center xb-feature2 mt-70">
+                        <div class="xb-item--icon">
+                            <img src="assets/img/icon/feat_01.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="card" style="width: 20rem; height: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title my-3">Creative Design</h5>
+                          <p class="card-text">UI/UX Design,
+                            Social Media Graphics, Logo & Branding Consultancy.</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="{{ route('porfolio.details') }}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+                <div class="row justify-content-center">
+                    <div class="xb-feature justify-content-center xb-feature2 mt-70">
+                        <div class="xb-item--icon">
+                            <img src="assets/img/icon/feat_01.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="card" style="width: 20rem; height: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title my-3">Digital Product & Development</h5>
+                          <p class="card-text">Website, SaaS &
+                            App Development, Consultation, IT Support & Maintenance Service.</p>
+                        </div>
+                        <div class="card-body">
+                            <a href="{{ route('porfolio.details') }}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- <div class="col-xl-5 offset-xl-3 col-lg-6 offset-lg-2 mt-30" data-aos="fade-left" data-aos-duration="900"
                 data-aos-delay="200">
                 <div class="xb-feature__wrap ul_li">
                     <div class="xb-feature xb-feature2 mt-70">
@@ -75,7 +134,7 @@
                         <p class="xb-item--content">Offer in-depth market analysis and investment</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
@@ -109,7 +168,43 @@
 <!-- services start -->
 <section class="services z-1 pos-rel pt-65 pb-150" data-bg-color="#E7E9EE">
     <div class="container px-60">
-        <div class="row justify-content-center g-12 mt-none-12">
+        <div class="row justify-content-center">
+            <div class="col-lg-5" style="height: auto">
+                <img src="{{ asset('assets/img/service/proses.png') }}" alt="">
+            </div>
+            <div class="col-lg-5">
+               <div class="row">
+                <div class="col-1">
+                    <h1 class="text-gold">1</h1>
+                </div>
+                <div class="col">
+                    <h2 class="xb-item--title">Planning</h2>
+                    <p>Initial Client Meeting, Requirements Gathering, Feasibility Study, Project Proposal, Contract and Agreement.</p>
+                </div>
+               </div>
+               <div class="row my-5">
+                    <div class="col-1">
+                        <h1 class="text-gold">2</h1>
+                    </div>
+
+                    <div class="col">
+                        <h2 class="xb-item--title">Development</h2>
+                        <p>Project Planning, Design Phase, Development Phase, Quality Assurance and Testing, Client Feedback and Revisions, Deployment.</p>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-1">
+                        <h1 class="text-gold">3</h1>
+                    </div>
+
+                    <div class="col">
+                        <h2 class="xb-item--title">Deliverable</h2>
+                        <p>Ongoing Support and Maintenance, Client Handover and Training, and Post-Launch Evaluation.</p>
+                    </div>
+               </div>
+            </div>
+        </div>
+        {{-- <div class="row justify-content-center g-12 mt-none-12">
             <div class="col-lg-4">
                 <div class="xb-service__sec-title mt-12">
                     <div class="sec-title">
@@ -231,7 +326,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
     <div class="xb-service__shape">
         <div class="shape shape--1">
@@ -494,45 +589,75 @@
                         <div class="sec-title mb-45">
                             <span class="subtitle ul_li"><img src="assets/img/icon/hr_icon.png" alt="">Get
                                 In Touch WITH US</span>
-                            <h2 class="title">Contact us Today for Expert <br> Financial Guidance</h2>
+                            <h2 class="title">Contact us Today for Consultation</h2>
                         </div>
-                        <form action="#" class="xb-contact">
+                        <form method="POST" action="{{ route('customer.store') }}" class="xb-contact needs-validation">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="xb-item--field">
                                         <span><img src="assets/img/icon/ins_user.svg" alt=""></span>
-                                        <input type="text" placeholder="Khamjat Chimaiya">
+                                        <input type="text" name="name" 
+                                            class="@error('name') is-invalid border-invalid ? '' @enderror" 
+                                            type="text" value="{{ old('name') }}" 
+                                            placeholder="Khamjat Chimaiya">
+
+                                         @error('name')
+                                            <div class="mt-2 text-danger">
+                                                <span>{{ $message }}</span>
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="xb-item--field">
                                         <span><img src="assets/img/icon/ins-sms-tracking.svg" alt=""></span>
-                                        <input type="email" placeholder="seargin@gmail.com">
+                                        <input type="email" name="email" 
+                                        class=" @error('email') is-invalid ? '' @enderror" type="email"
+                                        value="{{ old('email') }}" placeholder="seargin@gmail.com">
+
+                                        @error('email')
+                                            <div class="mt-2 text-danger">
+                                                @foreach($errors->get('email') as $error)
+                                                    <span>{{ $error }}</span><br>
+                                                @endforeach
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="xb-item--field">
                                         <span><img src="assets/img/icon/call-calling.svg" alt=""></span>
-                                        <input type="text" placeholder="+1 088 01 4800 24">
+                                        <input class="form-control @error('phone') is-invalid ? '' @enderror" 
+                                        name="phone" type="text" placeholder="08801480024" value="{{ old('phone') }}" >
+
+                                        @error('phone')
+                                            <div class="text-danger mt-2">
+                                                <span>{{ $message }}</span>
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="xb-item--field">
                                         <span><img src="assets/img/icon/ins-home-hashtag.svg" alt=""></span>
-                                        <select name="select" class="nice-select">
-                                            <option value="1">Select Subject</option>
-                                            <option value="2">Market Analysis</option>
-                                            <option value="3">Investment Insights</option>
-                                            <option value="4">Estate Planning</option>
-                                            <option value="4">Risk Assessment</option>
+                                        <select name="service_id" class="nice-select">
+                                            @foreach ($services as $service)
+                                                <option value="{{ $service->id }}">{{ $service->name }}</option>
+                                            @endforeach
                                         </select>
+                                        @error('service_id')
+                                            <div class="mt-2 text-danger">
+                                                <span>{{ $message }}</span>
+                                            </div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="xb-item--field">
                                         <span><img src="assets/img/icon/messages-2.svg" alt=""></span>
-                                        <textarea name="message" id="message" cols="30" rows="10"
-                                            placeholder="Write you message"></textarea>
+                                        <textarea name="message" id="message" cols="30" rows="10" 
+                                            placeholder="Write you message" class="@error('message') is-invalid ? '' @enderror" cols="30" rows="10">{{ old('message') }}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">

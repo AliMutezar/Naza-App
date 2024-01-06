@@ -18,6 +18,7 @@ class CustomerController extends Controller
     {
         $data['title'] = "Potencial Customer";
         $data['customers'] = Customer::latest()->get();
+        // dd($data['customers']);
 
         $data['customer_status'] = [];
         foreach ($data['customers'] as $customer) {
@@ -44,9 +45,10 @@ class CustomerController extends Controller
 
             $customerName = $validatedRequest['name'];
             $customerPhone = $validatedRequest['phone'];
-            Mail::to(env('MAIL_NOTIFICATION'))->send(new CustomerMail($customerName, $customerPhone));
+            $recipientEmail = 'aamutezar@gmail.com';
+            Mail::to($recipientEmail)->send(new CustomerMail($customerName, $customerPhone));
     
-            return redirect()->route('contact')->with('success', 'Thank you for submitting your data. Please wait, our team will contact you shortly.');
+            return redirect()->back()->with('success', 'Thank you for submitting your data. Please wait, our team will contact you shortly.');
         } catch (QueryException $e) {
             if ($e->errorInfo[1] === 1062) {
                 $errorMessage = 'The email address has already been taken.';

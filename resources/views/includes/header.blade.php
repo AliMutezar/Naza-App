@@ -11,17 +11,17 @@
                             <li class="menu-item-has-children {{ request()->routeIs('home') ? 'active' : '' }}"><a href="{{ route('home') }}"><span>Home</span></a></li>
                             <li class="menu-item-has-children {{ request()->routeIs('services', 'service.details') ? 'active' : '' }}">
                                 <a href="{{ route('services') }}"><span>Services</span></a>
-                                <ul class="submenu">
+                                {{-- <ul class="submenu">
                                     <li class="{{ request()->routeIs('services') ? 'active' : '' }}"><a href="{{ route('services') }}"><span>Services</span></a></li>
                                     <li class="{{ request()->routeIs('service.details') ? 'active' : '' }}"><a href="{{ route('service.details') }}"><span>Service Details</span></a></li>
-                                </ul>
+                                </ul> --}}
                             </li>                            
                             <li class="menu-item-has-children {{ request()->routeIs('porfolio', 'porfolio.details') ? 'active' : '' }}">
-                                <a href="{{ route('porfolio') }}"><span>Portfolio</span></a>
-                                <ul class="submenu">
+                                <a href="{{ route('porfolio') }}"><span>Case Studies</span></a>
+                                {{-- <ul class="submenu">
                                     <li class="{{ request()->routeIs('porfolio') ? 'active' : '' }}"><a href="{{ route('porfolio') }}"><span>Portfolio</span></a></li>
                                     <li class="{{ request()->routeIs('porfolio.details') ? 'active' : '' }}"><a href=" {{ route('porfolio.details') }} "><span>Portfolio Details</span></a></li>
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li class="{{ request()->routeIs('contact') ? 'active' : '' }}"><a href="{{ route('contact') }}"><span>Contact</span></a></li>
                             <li class="{{ request()->routeIs('career') ? 'active' : '' }}"><a href="{{ route('career') }}"><span>Career</span></a></li>
@@ -35,13 +35,13 @@
                                     <a href="index.html" rel="home"><img src="assets/img/logo/logo1.svg"
                                             alt=""></a>
                                 </div>
-                                <div class="xb-header-mobile-search xb-hide-xl">
+                                {{-- <div class="xb-header-mobile-search xb-hide-xl">
                                     <form role="search" action="#">
                                         <input type="text" placeholder="Search..." name="s"
                                             class="search-field">
                                     </form>
-                                </div>
-                                <nav class="xb-header-nav">
+                                </div> --}}
+                                {{-- <nav class="xb-header-nav">
                                     <ul class="xb-menu-primary clearfix">
                                         <li class="menu-item menu-item-has-children">
                                             <a href="#"><span>Home</span></a>
@@ -125,14 +125,14 @@
                                         <li class="menu-item"><a href="contact.html"><span>Contact</span></a>
                                         </li>
                                     </ul>
-                                </nav>
+                                </nav> --}}
                             </div>
                         </div>
                         <div class="xb-header-menu-backdrop"></div>
                     </div>
                 </div>
                 <div class="xb-header__btn d-none d-lg-block">
-                    <a class="xb-btn" href="{{ route('login') }}">LOGIN</a>
+                    {{-- <a class="xb-btn" href="{{ route('login') }}">LOGIN</a> --}}
                 </div>
                 <div class="xb-hamburger-menu">
                     <div class="xb-nav-mobile">

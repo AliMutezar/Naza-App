@@ -76,7 +76,7 @@
     <div class="container">
         <div class="sec-title text-center mb-45">
             <span class="subtitle ul_li"><img src="{{ asset('assets/img/icon/hr_icon.png') }} " alt="">Get In Touch WITH US</span>
-            <h2 class="title">Contact us Today for Expert <br> Financial Guidance</h2>
+            <h2 class="title">Contact us Today for Consultation</h2>
         </div>
         <div class="xb-contact__area">
             <form class="contact-from needs-validation" method="POST" action="{{ route('customer.store') }}">
@@ -122,10 +122,10 @@
                                 <input id="phone" class="form-control @error('phone') is-invalid ? '' @enderror" name="phone" type="number" placeholder="+1 088 01 4800 24" value="{{ old('phone') }}">
                             </div>
                             @error('phone')
-                            <div class="text-danger mt-2">
-                                <span>{{ $message }}</span>
-                            </div>
-                        @enderror
+                                <div class="text-danger mt-2">
+                                    <span>{{ $message }}</span>
+                                </div>
+                            @enderror
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -133,7 +133,7 @@
                             <label>Subject *</label>
                             <div class="field-inner pos-rel">
                                 <span class="icon"><img src="{{ asset('assets/img/icon/ins-home-hashtag.svg') }} " alt=""></span>
-                                <select name="service_id" class="nice-select">on>
+                                <select name="service_id" class="nice-select">
                                     @foreach ($services as $service)
                                         <option value="{{ $service->id }}">{{ $service->name }}</option>
                                     @endforeach

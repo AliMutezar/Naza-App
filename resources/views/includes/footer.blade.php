@@ -83,14 +83,14 @@
             </div>
         </div>
         <div class="footer-copyright ul_li_between mt-12">
-            <p class="mt-15">Copyright © 2023 Seargin. All rights reserved.</p>
+            <p class="mt-15">Naza Digital Consultant. Copyright © 2023. All Rights Reserved.</p>
             <div class="footer-social ul_li mt-15">
                 <span>Follow us :</span>
                 <ul class="ul_li">
-                    <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                    {{-- <li><a href="#!"><i class="fab fa-twitter"></i></a></li> --}}
+                    {{-- <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li> --}}
                     <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="#!"><i class="fab fa-pinterest-p"></i></a></li>
+                    {{-- <li><a href="#!"><i class="fab fa-pinterest-p"></i></a></li> --}}
                 </ul>
             </div>
         </div>

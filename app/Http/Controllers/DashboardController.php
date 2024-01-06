@@ -25,7 +25,7 @@ class DashboardController extends Controller
         $month = Customer::getMonth();
         $status = Customer::getChartStatus();
         $chart = $status->get('contacted');
-        dd($chart);
+        // dd($data);
 
         return view('backoffice_layouts.dashboard-mazer', $data);
     }
